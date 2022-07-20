@@ -24,3 +24,17 @@
 h4{
     font-weight: 700;
 }
+
+button{
+    background-color: white;
+    border:none;
+    border-radius: 7px;
+    color: rgb(209, 208, 208);
+    font-size: 30px;
+}
+
+button:hover{
+    background-color: rgb(209, 208, 208);
+    color: white;
+}
+
