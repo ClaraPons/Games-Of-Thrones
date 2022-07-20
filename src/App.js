@@ -64,6 +64,7 @@ class App extends React.Component {
      <div className="containers-perso">
       {this.state.characters.map((character) => (
       <Character
+        key={`${character.fullName}${character.id}`}
         name = {character.fullName}
         title = {character.title}
         image = {character.imageUrl}
@@ -80,6 +81,17 @@ class App extends React.Component {
         )}
       </div>
     }
+    <h2>Favorite</h2>
+    <div className="containers-favorite"> 
+        {this.state.favorites.map((favorite) => 
+          <Character 
+          key={`${favorite.fullName}${favorite.id}`}
+          name = {favorite.fullName}
+          title = {favorite.title}
+          image = {favorite.imageUrl}
+          />
+        )}
+    </div>
       </>
     )
   }
